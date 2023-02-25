@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    image: nitocer-mysql
+    build: ./
+    container_name: nitocer-mysql
+    expose:
+    - 3300
+    ports:
+    - 3300:3300
+    environment:
+      MYSQL_ROOT_PASSWORD: pass
+      MYSQL_DATABASE: nitocer-db
+    tty: True
